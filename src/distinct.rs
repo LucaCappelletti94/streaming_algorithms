@@ -170,6 +170,14 @@ where
 		}
 	}
 
+	/// Returns the current harmonic sum of the `HyperLogLog` data structure.
+	/// 
+	/// The harmonic sum is the sum of the reciprocals of the registers, i.e.
+	/// `1/2^m[0] + 1/2^m[1] + ... + 1/2^m[n-1]`.
+	pub fn harmonic_sum(&self) -> f64 {
+		self.sum
+	}
+
 	/// "Visit" an element.
 	#[inline]
 	pub fn push(&mut self, value: &V) {
