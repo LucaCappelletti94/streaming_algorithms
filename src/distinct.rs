@@ -178,6 +178,11 @@ where
 		self.sum
 	}
 
+	/// Returns the current number of zero registers in the `HyperLogLog` data structure.
+	pub fn zero_registers(&self) -> usize {
+		self.zero
+	}
+
 	/// "Visit" an element.
 	#[inline]
 	pub fn push(&mut self, value: &V) {
