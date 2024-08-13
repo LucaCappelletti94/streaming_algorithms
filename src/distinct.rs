@@ -183,6 +183,11 @@ where
 		self.zero
 	}
 
+	/// Returns the number of registers in the `HyperLogLog` data structure.
+	pub fn number_of_registers(&self) -> usize {
+		self.m.len()
+	}
+
 	/// "Visit" an element.
 	#[inline]
 	pub fn push(&mut self, value: &V) {
