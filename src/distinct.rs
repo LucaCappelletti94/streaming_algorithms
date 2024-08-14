@@ -188,6 +188,11 @@ where
 		self.m.len()
 	}
 
+	/// Returns the precision of the `HyperLogLog` data structure.
+	pub fn precision(&self) -> u8 {
+		self.p
+	}
+
 	/// "Visit" an element.
 	#[inline]
 	pub fn push(&mut self, value: &V) {
